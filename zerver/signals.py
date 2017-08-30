@@ -10,6 +10,7 @@ from typing import Any, Dict, Optional
 from zerver.lib.send_email import send_email, FromAddress
 from zerver.models import UserProfile
 
+#---- check you browser ----#
 def get_device_browser(user_agent):
     # type: (str) -> Optional[str]
     user_agent = user_agent.lower()
@@ -32,7 +33,7 @@ def get_device_browser(user_agent):
     else:
         return None
 
-
+#---- check you operator ----#
 def get_device_os(user_agent):
     # type: (str) -> Optional[str]
     user_agent = user_agent.lower()
@@ -50,7 +51,6 @@ def get_device_os(user_agent):
         return "iOS"
     else:
         return None
-
 
 @receiver(user_logged_in, dispatch_uid="only_on_login")
 def email_on_new_login(sender, user, request, **kwargs):
