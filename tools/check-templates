@@ -18,7 +18,7 @@ import lister
 from typing import cast, Callable, Dict, Iterable, List
 
 EXCLUDED_FILES = [
-    ## Test data Files for testing modules in tests
+    # Test data Files for testing modules in tests
     "tools/tests/test_template_data",
 ]
 
